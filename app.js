@@ -65,8 +65,35 @@ function displayGuess() {
     guessLeft.classList.remove('win', 'lose', 'fade-out');
     guessCenter.classList.remove('win', 'lose', 'fade-out');
     guessRight.classList.remove('win', 'lose', 'fade-out');
+
+    if (gameState === 'results') {
+        if (guess === 'left') {
+            guessCenter.classList.add('fade-out');
+            guessRight.classList.add('fade-out');
+            guessLeft.classList.add(result);
+        } else if (guess === 'center') {
+            guessLeft.classList.add('fade-out');
+            guessRight.classList.add('fade-out');
+            guessCenter.classList.add(result);
+        } else (guess === 'right') {
+            guessCenter.classList.add('fade-out');
+            guessLeft.classList.add('fade-out');
+            guessRight.classList.add(result);}
+    }
 }
 // event listeners
+guessLeft.addEventListener('click', () =>{
+    liftShell('left');
+});
+guessCenter.addEventListener('click', () =>{
+    liftShell('Center');
+});
+guessRight.addEventListener('click', () =>{
+    liftShell('Right');
+});
+
+/* Results */
+
 
 /* Run page load code */
 loadPage();
