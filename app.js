@@ -56,10 +56,16 @@ function displayScoreboard() {
 
 /* Guess */
 // get DOM
-const guessLeft = document.getElementById('guess-left');
-const guessCenter = document.getElementById('guess-center');
-const guessRight = document.getElementById('guess-right');
+const guessLeft = document.getElementById('guess-1');
+const guessCenter = document.getElementById('guess-2');
+const guessRight = document.getElementById('guess-3');
+
 // display
+function displayGuess() {
+    guessLeft.classList.remove('win', 'lose', 'fade-out');
+    guessCenter.classList.remove('win', 'lose', 'fade-out');
+    guessRight.classList.remove('win', 'lose', 'fade-out');
+}
 // event listeners
 
 /* Run page load code */
