@@ -2,9 +2,13 @@
 // import { getRandomItem } from './utils.js';
 
 /* State */
+let gameState = 'guess'; // 'guess' or 'results'
 
 /* Actions */
-function loadPage() {}
+function loadPage() {
+    displayShells();
+}
+function displayShells() {}
 
 /* Components */
 
